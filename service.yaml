@@ -6,10 +6,8 @@ metadata:
 spec:
   selector:
     app: node-app
-  type: NodePort
+  type: ClusterIP
   ports:
     - protocol: TCP
-      port: 9090      # Internal cluster port
-      targetPort: 9090 # Container port
-      nodePort: 32000  # Port to access externally
-
+      port: 9090
+      targetPort: 9090
